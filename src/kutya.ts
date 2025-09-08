@@ -34,16 +34,9 @@ export default class Kutya{
         this.id = id
     }
 
-    public dog(): IKutya{
-        const dog: IKutya =  {
-            id: this.id,
-            nev: this.nev,
-            fajta: this.fajta,
-            nem: this.nem, 
-            eletkor: this.eletkor,
-            kepUrl: this.kepUrl,
-        }
-
-        return dog;
+    public dogs(dogs1: IKutya[]): IKutya[] {
+        const dogs: IKutya[] = [];
+        dogs.push(...dogs1)
+        return dogs;
     }
 };

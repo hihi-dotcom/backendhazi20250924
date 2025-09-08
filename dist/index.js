@@ -48,4 +48,4 @@ for (const tbodysor of data) {
     createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.kepUrl);
 }
 const kutya = new Kutya(data[0]);
-console.log(kutya.dog());
+console.log(kutya.dogs(data));
