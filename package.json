@@ -1,0 +1,26 @@
+{
+  "name": "ts_node_elso_ora",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec tsx haha.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hihi-dotcom/ts_node_elso_ora.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hihi-dotcom/ts_node_elso_ora/issues"
+  },
+  "homepage": "https://github.com/hihi-dotcom/ts_node_elso_ora#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
