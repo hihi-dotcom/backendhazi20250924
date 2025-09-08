@@ -1,22 +1,22 @@
 {
-  "name": "ts_node_elso_ora",
+  "name": "backend_ts_2025_09_08",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec tsx haha.ts",
+    "dev": "nodemon --exec tsx  ./src/index.ts",
     "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hihi-dotcom/ts_node_elso_ora.git"
+    "url": "git+https://github.com/hihi-dotcom/backendhazik2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hihi-dotcom/ts_node_elso_ora/issues"
+    "url": "https://github.com/hihi-dotcom/backendhazik2/issues"
   },
-  "homepage": "https://github.com/hihi-dotcom/ts_node_elso_ora#readme",
+  "homepage": "https://github.com/hihi-dotcom/backendhazik2#readme",
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.10",
