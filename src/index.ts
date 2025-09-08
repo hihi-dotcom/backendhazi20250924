@@ -1,7 +1,7 @@
 import{data} from "./data"
+import Kutya from "./kutya";
 
-console.log('hellyeah');
-console.log(data)
+
 
 
 function createHTMLElementwithParentElement(htmltag:string, parent:HTMLElement ){
@@ -11,7 +11,7 @@ function createHTMLElementwithParentElement(htmltag:string, parent:HTMLElement )
     return htmlelem;
 }
 
-function createHTMLElementwithParentElementandInnerHtml(htmltag:string, parent:HTMLElement, innerhtml: string | number | boolean ){
+function createHTMLElementwithParentElementandInnerHtml(htmltag:string, parent:HTMLElement, innerhtml: string | number | boolean | null ){
     const htmlelem = document.createElement(htmltag);
     htmlelem.innerHTML = String(innerhtml)
     parent.appendChild(htmlelem);
@@ -62,3 +62,6 @@ for(const tbodysor of data){
     createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.kepUrl);
 }
 
+const kutya : Kutya =  new Kutya(data[0]);
+
+//console.log(kutya.dog());
