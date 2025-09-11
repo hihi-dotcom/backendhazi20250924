@@ -7,15 +7,29 @@ export interface IKutya{
     kepUrl: string | null;
 
 }
+class Valami{
+    public name! : string;
+  
+    x : number;
+    y : number;
 
+    constructor(  y : number, x = 0){
+        this.x = x;
+        this.y = y;
+    }
 
-export default class Kutya{
-   private id: number | null;
-   private nev: string;
-   private fajta: string;
-   private nem: boolean;
-   private eletkor: number;
-   private kepUrl: string | null;
+};
+
+const valami = new Valami(5);
+//valami.x = 15;
+console.log(`${valami.x}, ${valami.y}`)
+export default class Kutya implements IKutya{
+    id: number | null;
+    nev: string;
+    fajta: string;
+    nem: boolean;
+    eletkor: number;
+    kepUrl: string | null;
 
     constructor(dog: IKutya){
         this.id = dog.id || null;

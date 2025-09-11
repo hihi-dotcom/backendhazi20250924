@@ -64,4 +64,4 @@ for(const tbodysor of data){
 
 const kutya : Kutya =  new Kutya(data[0]);
 
-console.log(kutya.dogs(data));
+//console.log(kutya.dogs(data));
