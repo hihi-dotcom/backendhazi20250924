@@ -1,4 +1,6 @@
-export interface IKutya{
+import { data } from "./data"
+
+export interface IKutya {
     id: number | null;
     nev: string;
     fajta: string;
@@ -7,23 +9,12 @@ export interface IKutya{
     kepUrl: string | null;
 
 }
-class Valami{
-    public name! : string;
-  
-    x : number;
-    y : number;
 
-    constructor(  y : number, x = 0){
-        this.x = x;
-        this.y = y;
-    }
 
-};
 
-const valami = new Valami(5);
-//valami.x = 15;
-console.log(`${valami.x}, ${valami.y}`)
-export default class Kutya implements IKutya{
+
+
+export class Kutya implements IKutya {
     id: number | null;
     nev: string;
     fajta: string;
@@ -31,7 +22,7 @@ export default class Kutya implements IKutya{
     eletkor: number;
     kepUrl: string | null;
 
-    constructor(dog: IKutya){
+    constructor(dog: IKutya) {
         this.id = dog.id || null;
         this.nev = dog.nev;
         this.fajta = dog.fajta;
@@ -41,10 +32,10 @@ export default class Kutya implements IKutya{
 
     }
 
-    get Id(){
+    get Id() {
         return this.id
     }
-    set Id(id:number | null){
+    set Id(id: number | null) {
         this.id = id
     }
 
@@ -54,3 +45,4 @@ export default class Kutya implements IKutya{
         return dogs;
     }
 };
+

@@ -1,5 +1,4 @@
 import { data } from "./data.js";
-import Kutya from "./kutya.js";
 function createHTMLElementwithParentElement(htmltag, parent) {
     const htmlelem = document.createElement(htmltag);
     parent.appendChild(htmlelem);
@@ -38,14 +37,17 @@ const fejtomb = [
 for (const fejlcell of fejtomb) {
     createHTMLElementwithParentElementandInnerHtml('th', tfejsor, fejlcell.innerhtml);
 }
-for (const tbodysor of data) {
-    const trtb = createHTMLElementwithParentElement('tr', tbody);
-    createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.id);
-    createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.nev);
-    createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.fajta);
-    createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.nem);
-    createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.eletkor);
-    createHTMLElementwithParentElementandInnerHtml("td", trtb, tbodysor.kepUrl);
+function renderingDogTable(data1) {
+    for (const tbodysor of data1) {
+        const elemek = [tbodysor.id, tbodysor.nev, tbodysor.fajta, tbodysor.nem, tbodysor.eletkor, tbodysor.kepUrl];
+        console.log(elemek);
+        const trtb = createHTMLElementwithParentElement('tr', tbody);
+        for (const elem of elemek) {
+            createHTMLElementwithParentElementandInnerHtml("td", trtb, elem);
+        }
+    }
 }
-const kutya = new Kutya(data[0]);
+;
+renderingDogTable(data);
+//const kutya : Kutya =  new Kutya(data[0]);
 //console.log(kutya.dogs(data));
