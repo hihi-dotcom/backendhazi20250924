@@ -1,26 +1,33 @@
 {
-  "name": "backend_ts_2025_09_08",
+  "name": "kutya_projekt",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec tsx  ./src/index.ts",
-    "build": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hihi-dotcom/backendhazik2.git"
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build",
+    "dev": "nodemon --exec tsx  ./src/index.ts"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hihi-dotcom/backendhazik2/issues"
-  },
-  "homepage": "https://github.com/hihi-dotcom/backendhazik2#readme",
+  "keywords": [],
   "description": "",
+  "dependencies": {
+    "tslint": "^5.20.1",
+    "tsx": "^4.20.5"
+  },
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts",
   "devDependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
     "nodemon": "^3.1.10",
-    "tsx": "^4.20.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   }
 }

@@ -1,0 +1,30 @@
+{
+  "name": "backend_ts_2025_09_08",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec tsx  ./src/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hihi-dotcom/backendhazik2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hihi-dotcom/backendhazik2/issues"
+  },
+  "homepage": "https://github.com/hihi-dotcom/backendhazik2#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.4.0",
+    "nodemon": "^3.1.10",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}

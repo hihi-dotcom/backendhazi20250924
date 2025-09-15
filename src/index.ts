@@ -1,19 +1,6 @@
-import{data} from "./data"
-import {IKutya, Kutya}  from "./kutya";
 
+export function sayHelloWorld(world: string) {
+  return `Hello ${world}`;
+}
 
-
-const kutyus = new Kutya(data[0]);
-
-
-
-
-
-
-
-
-kutyus.renderingDogTable(data);
-
-//const kutya : Kutya =  new Kutya(data[0]);
-
-//console.log(kutya.dogs(data));
+console.log(sayHelloWorld("valami"));
