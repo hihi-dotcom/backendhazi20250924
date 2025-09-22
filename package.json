@@ -7,13 +7,15 @@
     "build": "tsc",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prepublish": "npm run build",
-    "dev": "nodemon --exec tsx  ./src/index.ts"
+    "dev": "nodemon --exec tsx  ./src/server.ts"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
     "tslint": "^5.20.1",
     "tsx": "^4.20.5"
   },
@@ -21,8 +23,9 @@
     "./bin/*",
     "./lib/*"
   ],
-  "typings": "./lib/index.d.ts",
+  "typings": "./lib/app.d.ts",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
