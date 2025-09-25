@@ -1,14 +1,20 @@
-import Kutya from "./kutya";
 import { data } from "./data";
-const kutyus = new Kutya(data[0]);
-export const valasz = (_req:any, res: any) => {
-    res.status(208).send("sodv");
+
+export const getAllData = (req:any, res: any) => {
+    res.status(200).send(data);
 }
 
-export const valasz2 = (_req1:any, res1: any) => {
-    res1.status(208).send("sodv");
+export const run = (req1:any, res1: any) => {
+    res1.status(200).send("sodv56");
 }
 
-export const valasz3 = (_req2:any, res2: any) => {
-    res2.status(205).send(kutyus.renderTable("dogtable", data));
+export const valasz3 = (req2:any, res2: any) => {
+    res2.status(200).send(data);
+}
+
+export const AddData = (req2:Request, res2: any) => {
+
+    const dog = req2.body;
+    console.log(dog);
+    res2.status(200).send(dog);
 }
